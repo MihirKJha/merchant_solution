@@ -1,2 +1,1 @@
-# merchant_solution
-merchant_solution
+#merchant-solution

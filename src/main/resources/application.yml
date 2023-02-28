@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: merchant_solution
+  profiles:
+    active: dev
+server:
+  port: '8081'

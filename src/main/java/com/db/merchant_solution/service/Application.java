@@ -2,11 +2,16 @@ package com.db.merchant_solution.service;
 
 import com.db.merchant_solution.lib.Algo;
 import com.db.merchant_solution.lib.SignalHandler;
+import lombok.extern.log4j.Log4j;
+import org.springframework.stereotype.Service;
 
 /**
  * This is your team’s code and should be changed as you see fit.
  */
-class Application implements SignalHandler {
+
+@Service
+@Log4j
+public class Application implements SignalHandler {
     public void handleSignal(int signal) {
         Algo algo = new Algo();
 

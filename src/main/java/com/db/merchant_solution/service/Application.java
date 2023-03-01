@@ -1,9 +1,13 @@
 package com.db.merchant_solution.service;
 
+import com.db.merchant_solution.enums.Numbers;
+import com.db.merchant_solution.enums.SignalExecutorsSupplier;
 import com.db.merchant_solution.lib.Algo;
 import com.db.merchant_solution.lib.SignalHandler;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;
+
+import java.util.Objects;
 
 /**
  * This is your team’s code and should be changed as you see fit.
@@ -13,9 +17,18 @@ import org.springframework.stereotype.Service;
 @Log4j
 public class Application implements SignalHandler {
     public void handleSignal(int signal) {
+
+        Objects.requireNonNull(signal, "Signal can not be null");
+
         Algo algo = new Algo();
 
-        switch (signal) {
+        log.info("Inside handleSignal method of flow");
+
+        Numbers numbers = Numbers.get(signal);
+
+        SignalExecutorsSupplier.getSignalExecutor(SignalExecutorsSupplier.valueOf(numbers.name()));
+
+    /*    switch (signal) {
             case 1:
                 algo.setUp();
                 algo.setAlgoParam(1,60);
@@ -39,7 +52,7 @@ public class Application implements SignalHandler {
             default:
                 algo.cancelTrades();
                 break;
-        }
+        }*/
 
         algo.doAlgo();
     }

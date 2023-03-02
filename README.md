@@ -35,3 +35,7 @@ instead of writing boilerplate code in client code  I would write all algo execu
 library and write minimum code in client . May be using event based architecture 
 would be more better solution to solve these kind of  problem.
 
+
+
+#Note
+Please note that Changed visiblity of Signal Handler and Algo classes to public.

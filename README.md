@@ -31,7 +31,7 @@ we  just need to add new entry in table and new Stragey class in code . code cha
 
 
 I know this was not allowed in the context of this challenge . But just a thought
-instead of writing boilet palte code in client code  I would write all alog execution in
+instead of writing boilerplate code in client code  I would write all algo execution in
 library and write minimum code in client . May be using event based architecture 
 would be more better solution to solve these kind of  problem.
 

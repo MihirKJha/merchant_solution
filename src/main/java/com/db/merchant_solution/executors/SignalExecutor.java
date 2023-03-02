@@ -1,7 +1,7 @@
 package com.db.merchant_solution.executors;
 
 /**
- * This is an upcall from our trading system, and we cannot change it.
+ * SignalExecutor interface
  */
 public interface SignalExecutor {
     void execute();

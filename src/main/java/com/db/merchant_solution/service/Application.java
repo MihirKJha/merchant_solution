@@ -11,8 +11,10 @@ import java.util.Objects;
 
 /**
  * This is your team’s code and should be changed as you see fit.
+ *
+ * Application service class to execute main business logic for processing the
+ * signals *
  */
-
 @Service
 @Log4j
 public class Application implements SignalHandler {
@@ -52,9 +54,9 @@ public class Application implements SignalHandler {
             default:
                 algo.cancelTrades();
                 break;
-        }*/
+        }
 
-        algo.doAlgo();
+        algo.doAlgo();*/
     }
 }
 

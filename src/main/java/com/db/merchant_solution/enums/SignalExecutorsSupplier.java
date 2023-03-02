@@ -4,7 +4,11 @@ import com.db.merchant_solution.executors.*;
 
 import java.util.function.Supplier;
 
+/**
+ * Enums to map signal to corresponding business logic supplier
+ */
 public enum SignalExecutorsSupplier implements Supplier<SignalExecutor> {
+    CANCEL(CancelSignal::new),
     ONE(OneSignal::new),
     TWO(TwoSignal::new),
     THREE(ThreeSignal::new),

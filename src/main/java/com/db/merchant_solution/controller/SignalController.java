@@ -21,7 +21,7 @@ public class SignalController {
     @Autowired
     private Application application;
 
-    @ApiOperation("API to retrieve order item")
+    @ApiOperation("API to process signal")
     @GetMapping("/{signal}")
     public void handleTradesBooking(@PathVariable("signal") int signal) {
         application.handleSignal(signal);

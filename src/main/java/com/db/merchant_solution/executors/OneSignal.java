@@ -1,12 +1,19 @@
 package com.db.merchant_solution.executors;
 
+import com.db.merchant_solution.lib.Algo;
+
 /**
- * This is implemented in a third-party library and we cannot change it
+ * Implementation class for handling signal 1
  */
 public class OneSignal implements SignalExecutor {
     @Override
     public void execute() {
-
+        Algo algo = new Algo();
+        algo.setUp();
+        algo.setAlgoParam(1,60);
+        algo.performCalc();
+        algo.submitToMarket();
+        algo.doAlgo();
     }
 }
 
